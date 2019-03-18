@@ -1,33 +1,53 @@
 .App {
-  text-align: center;
+  height: 100vh;
+  text-align: left;
+  background-color: rgb(225, 225, 225);
+  overflow: hidden;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.StudentList {
+  width: 70%;
+  height: 80%;
+  margin: 0 auto;
+  background:white;
+  position: absolute;
+  left: 15%;
+  top: 10%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Student {
+  max-width: 100%;
+  border-bottom: 1px solid rgb(235, 235, 235);
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.avatar {
+  border-radius: 50%;
+  border: 2px solid rgb(235, 235, 235);
+  float: left;
+  height: 100px;
+  width: 100px;
+  margin-right: 20px;
+  margin-top: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 0.25%;
+  margin-top: 0px;
+}
+
+.details {
+  margin-left: 140px;
+  color: rgb(140, 140, 140);
+}
+
+button {
+  float: right;
 }
