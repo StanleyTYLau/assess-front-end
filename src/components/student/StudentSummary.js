@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import StudentGrades from './StudentGrades'
+import TagForm from './tagForm'
+import TagList from './tagList'
 
 class StudentSummary extends Component {
   state = {
@@ -29,7 +31,11 @@ class StudentSummary extends Component {
         <div className='details'>Average: {avg}%</div>
 
         {this.state.showGrades ? (
-          <StudentGrades grades={this.props.student.grades}/>
+          <div>
+            <StudentGrades grades={this.props.student.grades}/>
+            <TagList tags={this.props.student.tags}/>
+            <TagForm addTag={this.props.addTag} studentId={this.props.student.id} />
+          </div>
         ) : (
           <span></span>
         )}

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SearchBar = ({ searchInput, handleChange }) => {
+const SearchBar = ({ searchInput, handleChange, tagInput, handleTagChange }) => {
 
   
   return (
@@ -9,9 +9,16 @@ const SearchBar = ({ searchInput, handleChange }) => {
         placeholder='Search by name'
         className='form'
         type='text'
-        id='search'
         value={searchInput}
-        onChange={handleChange} />
+        onChange={handleChange} 
+      />
+      <input 
+        placeholder='Search by tag'
+        className='form'
+        type='text'
+        value={tagInput}
+        onChange={handleTagChange} 
+      />
     </div>
   )
   
