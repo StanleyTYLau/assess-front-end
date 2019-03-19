@@ -20,14 +20,16 @@ class StudentSummary extends Component {
       <div className='Student'>
         <img className='avatar' src={this.props.student.pic} alt={this.props.student.pic}/>
         <h3>{this.props.student.firstName} {this.props.student.lastName}</h3>
-        <button onClick={this.handleShow}>+</button>
+        <button onClick={this.handleShow}>
+          {this.state.showGrades ? (<span>-</span>) : (<span>+</span>)}
+        </button>
         <div className='details'>Email: {this.props.student.email}</div>
         <div className='details'>Company: {this.props.student.company}</div>
         <div className='details'>Skill: {this.props.student.skill}</div>
         <div className='details'>Average: {avg}%</div>
 
         {this.state.showGrades ? (
-          <StudentGrades />
+          <StudentGrades grades={this.props.student.grades}/>
         ) : (
           <span></span>
         )}
