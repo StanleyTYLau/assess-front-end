@@ -42,7 +42,6 @@ class App extends Component {
         if (student.tags) {
           let val = ''
           student.tags.forEach((tag) => {
-            console.log('tag:', tag, tag.includes(input))
             val = tag.includes(input)
           })
           return val
